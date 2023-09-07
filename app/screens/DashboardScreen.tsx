@@ -7,6 +7,8 @@ import { useHeader } from "app/utils/useHeader"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "app/models"
 import tw from 'app/lib/tw'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
 
 interface DashboardScreenProps extends AppStackScreenProps<"Dashboard"> {}
 
