@@ -12,6 +12,7 @@ import { colors, spacing } from "../theme"
 import { ExtendedEdge, useSafeAreaInsetsStyle } from "../utils/useSafeAreaInsetsStyle"
 import { Icon, IconTypes } from "./Icon"
 import { Text, TextProps } from "./Text"
+import tw from "app/lib/tw"
 
 export interface HeaderProps {
   /**
@@ -144,7 +145,7 @@ interface HeaderActionProps {
  */
 export function Header(props: HeaderProps) {
   const {
-    backgroundColor = colors.background,
+    backgroundColor =tw.color('primary'),
     LeftActionComponent,
     leftIcon,
     leftIconColor,
