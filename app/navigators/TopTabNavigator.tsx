@@ -13,9 +13,6 @@ const Tab = createMaterialTopTabNavigator<TopTabNavigatorParamList>();
 export const TopTabNavigator = () => {
   return (
     <Tab.Navigator screenOptions={{swipeEnabled:true}}>
-      <Tab.Screen name="Demo" component={WelcomeScreen} />
-      <Tab.Screen name="Demo2" component={WelcomeScreen} />
-      <Tab.Screen name="Demo24" component={WelcomeScreen} />
     </Tab.Navigator>
   )
 }
