@@ -25,61 +25,10 @@ export const DashboardScreen: FC<DashboardScreenProps> = observer(function Dashb
     rightIconColor: "white",
   })
 
-  const tableData = [
-    {
-      title: "AT&T Inc.",
-      price: "32,445",
-      inc: "0.12",
-    },
-    {
-      title: "AT&T Inc.",
-      price: "32,445",
-      inc: "0.12",
-    },
-    {
-      title: "AT&T Inc.",
-      price: "32,445",
-      inc: "0.12",
-    },
-    {
-      title: "AT&T Inc.",
-      price: "32,445",
-      inc: "0.12",
-    },
-    {
-      title: "AT&T Inc.",
-      price: "32,445",
-      inc: "0.12",
-    },
-    {
-      title: "AT&T Inc.",
-      price: "32,445",
-      inc: "0.12",
-    },
-    {
-      title: "AT&T Inc.",
-      price: "32,445",
-      inc: "0.12",
-    },
-  ]
   return (
     <Screen style={$root} preset="scroll">
       <TopTabNavigator />
-      <View style={[tw`h-full `, { flex: 1 }]}>
-        {/*  */}
-        {
-          //   tableData.map((data,index)=>{
-          //     const isOdd=index%2!=0;
-          //     return(
-          //       <View style={tw`flex-row gap-6 ${isOdd?'bg-slate-800':''} justify-between px-2`}>
-          //   <Text style={tw`text-white`}>AT&T Inc.</Text>
-          //   <Text style={tw`text-white`}>32,445 $</Text>
-          //   <Text style={tw`text-white`}>0,12</Text>
-          // </View>
-          //     )
-          //   })
-        }
-      </View>
+      <View style={[tw`h-full `, { flex: 1 }]}></View>
     </Screen>
   )
 })

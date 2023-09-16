@@ -22,11 +22,11 @@ export const TopTabNavigator = () => {
     tabBarInactiveTintColor: tw.color("secondary"),
     tabBarLabelStyle: tw`capitalize text-base`,
     tabBarScrollEnabled: true,
-    tabBarIndicatorStyle: tw`bg-accent`
+    tabBarIndicatorStyle: tw`bg-accent`,
   }
 
   return (
-    <Tab.Navigator screenOptions={screenOptions}>
+    <Tab.Navigator screenOptions={screenOptions} initialRouteName="Watchlist">
       <Tab.Screen name="Market Overview" component={MarketOverviewScreen} />
       <Tab.Screen name="Watchlist" component={WatchlistScreen} />
       <Tab.Screen name="GuidantsNews" component={GuidantsNewsScreen} />
