@@ -55,11 +55,11 @@ export const WatchlistScreen: FC<WatchlistScreenProps> = observer(function Watch
   ]
 
   return (
-    <Screen style={$root} preset="scroll">
+    <Screen style={$root} preset="scroll" >
       {tableData.map((data, index) => {
         const isOdd = index % 2 != 0
         return (
-          <View style={tw`flex-row gap-6 ${isOdd ? "bg-slate-800" : ""} justify-between px-2`} key={index}>
+          <View style={tw`flex-row gap-6 ${isOdd ? "bg-slate-800" : ""} justify-between px-2 h-8`} key={index}>
             <Text style={tw`text-white`}>AT&T Inc.</Text>
             <Text style={tw`text-white`}>32,445 $</Text>
             <Text style={tw`text-white`}>0,12</Text>

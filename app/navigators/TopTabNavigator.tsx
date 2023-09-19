@@ -26,7 +26,7 @@ export const TopTabNavigator = () => {
   }
 
   return (
-    <Tab.Navigator screenOptions={screenOptions} initialRouteName="Watchlist">
+    <Tab.Navigator screenOptions={screenOptions} initialRouteName="Watchlist" style={{minHeight:668}}>
       <Tab.Screen name="Market Overview" component={MarketOverviewScreen} />
       <Tab.Screen name="Watchlist" component={WatchlistScreen} />
       <Tab.Screen name="GuidantsNews" component={GuidantsNewsScreen} />
