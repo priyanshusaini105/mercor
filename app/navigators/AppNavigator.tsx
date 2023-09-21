@@ -63,7 +63,7 @@ const Stack = createNativeStackNavigator<AppStackParamList>()
 const AppStack = observer(function AppStack() {
   return (
     <Stack.Navigator
-      screenOptions={{ headerShown: false, navigationBarColor: colors.background }}
+      screenOptions={{ headerShown: false, navigationBarColor: colors.background ,animation:'default'}}
     >
           {/* <Stack.Screen name="Welcome" component={Screens.WelcomeScreen} /> */}
       {/** 🔥 Your screens go here */}
@@ -71,7 +71,7 @@ const AppStack = observer(function AppStack() {
 			<Stack.Screen name="GuidantsNews" component={Screens.GuidantsNewsScreen} />
 			<Stack.Screen name="Watchlist" component={Screens.WatchlistScreen} />
 			<Stack.Screen name="MarketOverview" component={Screens.MarketOverviewScreen} />
-			<Stack.Screen name="Chart" component={Screens.ChartScreen} />
+			<Stack.Screen name="Chart" component={Screens.ChartScreen} options={{animation:'default'}}/>
 			{/* IGNITE_GENERATOR_ANCHOR_APP_STACK_SCREENS */}
     </Stack.Navigator>
   )
