@@ -17,6 +17,7 @@ import * as Screens from "app/screens"
 import Config from "../config"
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
 import { colors } from "app/theme"
+import { Quote } from "app/types"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -39,7 +40,9 @@ export type AppStackParamList = {
 	Watchlist: undefined
 	Market: undefined
 	MarketOverview: undefined
-	Chart: undefined
+	Chart:{
+    quote:Quote
+  }
 	// IGNITE_GENERATOR_ANCHOR_APP_STACK_PARAM_LIST
 }
 
