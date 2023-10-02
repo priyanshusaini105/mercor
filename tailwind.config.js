@@ -20,7 +20,7 @@ module.exports = {
     "extend": {
       "colors": {
         "primary": '#16171C',
-        "secondary": '#43464D',
+        "secondary": '#1e1f26',
         "accent": "#487FD9",
         "text": {
           "50": "#f0f0f0",
