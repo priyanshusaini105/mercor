@@ -22,4 +22,6 @@ export interface Quote {
     sharesOutstanding: number;
     timestamp: number;
   }
+
+  export type DataMethod='Day'|'Week'|'Month'|"Year"|'All'
   
