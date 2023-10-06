@@ -20,7 +20,7 @@ export const ChartScreen: FC<ChartScreenProps> = observer(function ChartScreen({
   navigation,
 }) {
   const quote = route.params.quote;
-  const [selectedDataMethod,setSelectedDataMethod]=useState<DataMethod>()
+  const [selectedDataMethod,setSelectedDataMethod]=useState<DataMethod>('Day')
 
   useHeader({
     title: quote.symbol,
@@ -138,7 +138,7 @@ export const ChartScreen: FC<ChartScreenProps> = observer(function ChartScreen({
         <Text style={tw`text-center`}>Buy</Text>
       </TouchableOpacity>
 
-      <View>
+      <View style={tw`flex-row`}>
         {dataMethod.map((item,index)=>(
           <TouchableOpacity style={tw`${item===selectedDataMethod?'bg-gray-800':'bg-gray-200'}  rounded-md p-4`} onPress={()=>setSelectedDataMethod(item)}>
             <Text style={tw`text-center`}>{item}</Text>
