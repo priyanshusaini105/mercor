@@ -2,7 +2,7 @@ import React, { FC, useState } from "react"
 import { observer } from "mobx-react-lite"
 import { StyleSheet, TouchableOpacity, View, ViewStyle } from "react-native"
 import { AppStackParamList, AppStackScreenProps } from "app/navigators"
-import { Screen, Text } from "app/components"
+import { Icon, Screen, Text } from "app/components"
 import { NativeStackScreenProps } from "@react-navigation/native-stack"
 import { useHeader } from "app/utils/useHeader"
 import tw from "app/lib/tw"
@@ -124,7 +124,7 @@ export const ChartScreen: FC<ChartScreenProps> = observer(function ChartScreen({
   const dataMethod:DataMethod[]=['Day','Week','Month',"Year",'All']
 
   return (
-    <Screen style={$root} preset="scroll">
+    <Screen style={$root} preset="scroll" contentContainerStyle={tw`px-4`}>
       <Text style={styles.kurs}>{quote.price.toLocaleString()}</Text>
       <Text style={styles.exchange}>{quote.exchange}</Text>
       {/* candlestick chart */}
@@ -134,17 +134,20 @@ export const ChartScreen: FC<ChartScreenProps> = observer(function ChartScreen({
         </CandlestickChart>
       </CandlestickChart.Provider>
 
-      <TouchableOpacity style={tw`bg-sky-700 rounded-md p-4`}>
-        <Text style={tw`text-center`}>Buy</Text>
-      </TouchableOpacity>
 
-      <View style={tw`flex-row`}>
+      <View style={tw`flex-row justify-between`}>
         {dataMethod.map((item,index)=>(
-          <TouchableOpacity style={tw`${item===selectedDataMethod?'bg-gray-800':'bg-gray-200'}  rounded-md p-4`} onPress={()=>setSelectedDataMethod(item)}>
-            <Text style={tw`text-center`}>{item}</Text>
+          <TouchableOpacity style={tw` `} onPress={()=>setSelectedDataMethod(item)}>
+            <Text style={tw`${item===selectedDataMethod?'text-white':'text-[#43464D]'} text-center`}>{item}</Text>
           </TouchableOpacity>
         ))}
+
+        <Icon icon="graph" size={32}/>
       </View>
+
+      <TouchableOpacity style={tw`bg-[#487FD9] rounded-md p-4`}>
+        <Text style={tw`text-center`}>Buy</Text>
+      </TouchableOpacity>
     </Screen>
   )
 })
